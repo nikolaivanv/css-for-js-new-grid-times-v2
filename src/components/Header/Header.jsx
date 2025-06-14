@@ -86,11 +86,10 @@ const DesktopActionGroup = styled(ActionGroup)`
 
 const SubscribeWrapper = styled.div`
   display: none;
+
   @media (${QUERIES.laptopAndUp}) {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
+    display: revert;
+    position: relative;
     justify-self: end;
   }
 `;
@@ -118,12 +117,16 @@ const MainHeader = styled(MaxWidthWrapper)`
 `;
 
 const LoginLink = styled.a`
+  position: absolute;
   font-style: italic;
   text-decoration: underline;
   color: var(--color-gray-900);
   font-size: ${14 / 16}rem;
   line-height: ${22 / 14};
   font-weight: var(--font-weight-normal);
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
 `;
 
 export default Header;
